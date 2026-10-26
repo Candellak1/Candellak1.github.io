@@ -201,6 +201,9 @@ section{padding-block:88px}
 .case dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;font-size:.95rem}
 .case dt{color:var(--muted)}
 .case dd{margin:0}
+.case-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px 32px;align-items:start}
+.case-wide .shot{grid-column:1;grid-row:1/span 3;aspect-ratio:4/3}
+.case-wide>:not(.shot){grid-column:2}
 
 /* Поддержка */
 .support .wrap>div{background:linear-gradient(120deg,var(--tint),var(--surface) 60%);border:1px solid var(--line);border-radius:28px;padding:44px;display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:32px;align-items:center}
@@ -257,6 +260,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .hero-grid{grid-template-columns:minmax(0,1fr);gap:44px}
   .services{grid-template-columns:minmax(0,1fr)}
   .svc-main{grid-row:auto}
+  .case-wide{grid-template-columns:minmax(0,1fr)}
+  .case-wide .shot{grid-column:auto;grid-row:auto;aspect-ratio:16/8}
+  .case-wide>:not(.shot){grid-column:auto}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}
   .steps::before{display:none}
   .about{grid-template-columns:minmax(0,1fr);gap:28px}
@@ -421,33 +427,46 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="sec-head reveal">
         <span class="eyebrow">Кейсы</span>
         <h2>Что было и что стало</h2>
-        <p>Примеры работ с описанием задачи и результата.</p>
+        <p>Новые версии реальных сайтов, которые я сделал по своей инициативе: что мешало клиентам и как это можно исправить.</p>
       </div>
       <div class="cases">
-        <article class="case reveal">
-          <div class="case-top"><h3><span class="ph">Название проекта</span></h3><span class="chip">Доработка сайта</span></div>
-          <div class="shot">[скриншот сайта до и после]</div>
+        <article class="case case-wide reveal">
+          <div class="case-top"><h3>Ветеринарная клиника: главная страница для телефона</h3><span class="chip">Доработка сайта</span></div>
+          <div class="shot">[скриншоты «было / стало» на телефоне]</div>
           <div class="ba-mini">
-            <div><b>Было</b><span class="ph">Что было не так с сайтом</span></div>
-            <div><b>Стало</b><span class="ph">Что улучшилось</span></div>
+            <div><b>Было</b><span>Сайт 2012 года, сделанный под компьютер. На телефоне текст и меню мелкие, три номера телефона нельзя нажать, висит устаревший новогодний график.</span></div>
+            <div><b>Стало</b><span>Страница удобна с телефона: номера нажимаются, кнопка «Позвонить» всегда под рукой, есть «Как добраться» и отдельный блок записи на приём.</span></div>
           </div>
           <dl>
-            <dt>Сфера</dt><dd><span class="ph">кафе, салон, стройка…</span></dd>
-            <dt>Сделано</dt><dd><span class="ph">список изменений</span></dd>
-            <dt>Ссылка</dt><dd><span class="ph">если можно показать</span></dd>
+            <dt>Сфера</dt><dd>ветеринарная клиника, Ленинградская область</dd>
+            <dt>Сделано</dt><dd>версия для телефона, кнопки «Позвонить» и «Как добраться», блок записи, 9 карточек услуг. Проверено на экранах шириной от 320 до 1280 px</dd>
+            <dt>Формат</dt><dd>концепт, сделан по своей инициативе</dd>
           </dl>
         </article>
         <article class="case reveal">
-          <div class="case-top"><h3><span class="ph">Название проекта</span></h3><span class="chip">Telegram</span></div>
-          <div class="shot">[скриншот бота или мини-приложения]</div>
+          <div class="case-top"><h3>Шиномонтаж: цены и калькулятор</h3><span class="chip">Доработка сайта</span></div>
+          <div class="shot">[скриншоты «было / стало» на телефоне]</div>
           <div class="ba-mini">
-            <div><b>Было</b><span class="ph">Как задача решалась раньше</span></div>
-            <div><b>Стало</b><span class="ph">Что изменилось для бизнеса</span></div>
+            <div><b>Было</b><span>Цены в широких таблицах, на телефоне их не прочитать без увеличения. Длинное меню занимает пол-экрана.</span></div>
+            <div><b>Стало</b><span>Калькулятор: клиент выбирает машину, радиус и работы и сразу видит цену. Внизу экрана кнопка «Позвонить».</span></div>
           </div>
           <dl>
-            <dt>Сфера</dt><dd><span class="ph">сфера бизнеса</span></dd>
-            <dt>Сделано</dt><dd><span class="ph">что умеет бот</span></dd>
-            <dt>Ссылка</dt><dd><span class="ph">если можно показать</span></dd>
+            <dt>Сфера</dt><dd>шиномонтаж и автосервис, Ленинградская область</dd>
+            <dt>Сделано</dt><dd>версия для телефона, калькулятор стоимости, компактное меню, нажимаемые номера</dd>
+            <dt>Формат</dt><dd>концепт, сделан по своей инициативе</dd>
+          </dl>
+        </article>
+        <article class="case reveal">
+          <div class="case-top"><h3>Дрова с доставкой: удобно с телефона без переделки сайта</h3><span class="chip">Доработка сайта</span></div>
+          <div class="shot">[скриншоты «было / стало» на телефоне]</div>
+          <div class="ba-mini">
+            <div><b>Было</b><span>На телефоне сайт показывался уменьшенной копией компьютерной версии: самый мелкий текст 4,4 px, номер телефона нарисован на картинке.</span></div>
+            <div><b>Стало</b><span>Текст от 16 px, блоки идут в одну колонку, номер нажимается, внизу кнопка «Позвонить». На компьютере сайт выглядит как раньше.</span></div>
+          </div>
+          <dl>
+            <dt>Сфера</dt><dd>продажа дров с доставкой, Ленинградская область</dd>
+            <dt>Сделано</dt><dd>мобильная версия главной страницы двумя небольшими вставками кода, без переделки сайта</dd>
+            <dt>Формат</dt><dd>концепт, сделан по своей инициативе</dd>
           </dl>
         </article>
       </div>
