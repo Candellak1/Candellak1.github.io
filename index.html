@@ -231,8 +231,7 @@ section{padding-block:88px}
 /* Обо мне */
 .about{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;align-items:start}
 .avatar{width:100%;max-width:240px;aspect-ratio:1;border-radius:28px;background:linear-gradient(145deg,var(--tint),var(--surface));border:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden}
-.avatar span{font-family:var(--f-display);font-weight:700;font-size:5.5rem;color:var(--accent-strong)}
-.avatar small{position:absolute;bottom:12px;font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+.avatar img{display:block;width:100%;height:100%;object-fit:cover}
 .about-text{display:flex;flex-direction:column;gap:18px;max-width:40em}
 .about-text h2{font-family:var(--f-display);font-weight:800;letter-spacing:-.025em;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.2}
 
@@ -285,7 +284,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .steps::before{display:none}
   .about{grid-template-columns:minmax(0,1fr);gap:28px}
   .avatar{max-width:160px;border-radius:22px}
-  .avatar span{font-size:3.8rem}
   .support .wrap>div{grid-template-columns:minmax(0,1fr);padding:32px}
   .tech{grid-template-columns:minmax(0,1fr)}
   .contact-grid{grid-template-columns:minmax(0,1fr)}
@@ -517,7 +515,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   <!-- Обо мне -->
   <section id="about">
     <div class="wrap about">
-      <div class="avatar reveal" aria-label="Место для фото"><span>С</span><small>место для фото</small></div>
+      <div class="avatar reveal"><img src="img/photo.webp" alt="Сергей" width="480" height="480" loading="lazy"></div>
       <div class="about-text reveal">
         <span class="eyebrow">Обо мне</span>
         <h2>Меня зовут Сергей</h2>
