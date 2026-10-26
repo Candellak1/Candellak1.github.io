@@ -189,10 +189,14 @@ section{padding-block:88px}
 
 /* Кейсы */
 .cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.case{border:1px dashed rgba(var(--accent-rgb),.4);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px;background:color-mix(in srgb,var(--surface) 45%,transparent)}
+.case{border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px;background:var(--surface)}
 .case-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .case h3{font-size:1.15rem;font-weight:600;font-family:var(--f-body)}
-.case .shot{aspect-ratio:16/8;max-width:100%;border-radius:10px;background:repeating-linear-gradient(135deg,var(--surface) 0 12px,var(--surface-2) 12px 24px);display:grid;place-items:center;color:var(--muted);font-family:var(--f-mono);font-size:.78rem;text-align:center;padding:12px}
+.case .shot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.shot figure{position:relative;margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--surface-2)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{position:absolute;top:8px;left:8px;font-family:var(--f-mono);font-size:.68rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--chip-bg);color:var(--bad)}
+.shot figure+figure figcaption{color:var(--good)}
 .ba-mini{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .ba-mini div{background:var(--bg);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px;font-size:.92rem;min-width:0}
 .ba-mini b{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
@@ -202,7 +206,7 @@ section{padding-block:88px}
 .case dt{color:var(--muted)}
 .case dd{margin:0}
 .case-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px 32px;align-items:start}
-.case-wide .shot{grid-column:1;grid-row:1/span 3;aspect-ratio:4/3}
+.case-wide .shot{grid-column:1;grid-row:1/span 3}
 .case-wide>:not(.shot){grid-column:2}
 
 /* Поддержка */
@@ -261,7 +265,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   .services{grid-template-columns:minmax(0,1fr)}
   .svc-main{grid-row:auto}
   .case-wide{grid-template-columns:minmax(0,1fr)}
-  .case-wide .shot{grid-column:auto;grid-row:auto;aspect-ratio:16/8}
+  .case-wide .shot{grid-column:auto;grid-row:auto}
   .case-wide>:not(.shot){grid-column:auto}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}
   .steps::before{display:none}
@@ -432,7 +436,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="cases">
         <article class="case case-wide reveal">
           <div class="case-top"><h3>Ветеринарная клиника: главная страница для телефона</h3><span class="chip">Доработка сайта</span></div>
-          <div class="shot">[скриншоты «было / стало» на телефоне]</div>
+          <div class="shot">
+            <figure><img src="img/cases/vet-before.webp" alt="Было: старый сайт ветклиники на телефоне — мелкий текст в несколько колонок" width="540" height="960" loading="lazy"><figcaption>Было</figcaption></figure>
+            <figure><img src="img/cases/vet-after.webp" alt="Стало: новая главная на телефоне — крупные кнопки «Позвонить» и «Как добраться»" width="540" height="960" loading="lazy"><figcaption>Стало</figcaption></figure>
+          </div>
           <div class="ba-mini">
             <div><b>Было</b><span>Сайт 2012 года, сделанный под компьютер. На телефоне текст и меню мелкие, три номера телефона нельзя нажать, висит устаревший новогодний график.</span></div>
             <div><b>Стало</b><span>Страница удобна с телефона: номера нажимаются, кнопка «Позвонить» всегда под рукой, есть «Как добраться» и отдельный блок записи на приём.</span></div>
@@ -445,7 +452,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         </article>
         <article class="case reveal">
           <div class="case-top"><h3>Шиномонтаж: цены и калькулятор</h3><span class="chip">Доработка сайта</span></div>
-          <div class="shot">[скриншоты «было / стало» на телефоне]</div>
+          <div class="shot">
+            <figure><img src="img/cases/tires-before.webp" alt="Было: страница цен шиномонтажа на телефоне — мелкие широкие таблицы" width="540" height="960" loading="lazy"><figcaption>Было</figcaption></figure>
+            <figure><img src="img/cases/tires-after.webp" alt="Стало: калькулятор шиномонтажа на телефоне с итоговой ценой" width="540" height="960" loading="lazy"><figcaption>Стало</figcaption></figure>
+          </div>
           <div class="ba-mini">
             <div><b>Было</b><span>Цены в широких таблицах, на телефоне их не прочитать без увеличения. Длинное меню занимает пол-экрана.</span></div>
             <div><b>Стало</b><span>Калькулятор: клиент выбирает машину, радиус и работы и сразу видит цену. Внизу экрана кнопка «Позвонить».</span></div>
@@ -458,7 +468,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         </article>
         <article class="case reveal">
           <div class="case-top"><h3>Дрова с доставкой: удобно с телефона без переделки сайта</h3><span class="chip">Доработка сайта</span></div>
-          <div class="shot">[скриншоты «было / стало» на телефоне]</div>
+          <div class="shot">
+            <figure><img src="img/cases/firewood-before.webp" alt="Было: сайт продажи дров на телефоне — уменьшенная копия компьютерной версии" width="540" height="960" loading="lazy"><figcaption>Было</figcaption></figure>
+            <figure><img src="img/cases/firewood-after.webp" alt="Стало: тот же сайт на телефоне — крупный текст и кнопка «Позвонить» внизу" width="540" height="960" loading="lazy"><figcaption>Стало</figcaption></figure>
+          </div>
           <div class="ba-mini">
             <div><b>Было</b><span>На телефоне сайт показывался уменьшенной копией компьютерной версии: самый мелкий текст 4,4 px, номер телефона нарисован на картинке.</span></div>
             <div><b>Стало</b><span>Текст от 16 px, блоки идут в одну колонку, номер нажимается, внизу кнопка «Позвонить». На компьютере сайт выглядит как раньше.</span></div>
