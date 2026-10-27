@@ -83,14 +83,8 @@ a{color:inherit}
 h1,h2,h3{color:var(--fg-strong);text-wrap:balance;margin:0}
 p{margin:0}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.ph{color:var(--accent-strong);background:var(--accent-soft);border-radius:4px;padding:0 .25em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
-
-/* Черновик */
-.draft{background:var(--accent-soft);color:var(--accent-strong);font-size:.85rem}
-.draft .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding-block:8px}
-.draft button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;opacity:.8;flex-shrink:0}
 
 /* Шапка */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 50%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
@@ -310,12 +304,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 </style>
 </head>
 <body>
-<div class="draft" id="draft">
-  <div class="wrap">
-    <span>Черновик: всё, что выделено <span class="ph">вот так</span>, нужно заменить своими данными.</span>
-    <button type="button" id="draft-close" aria-label="Скрыть подсказку">Скрыть</button>
-  </div>
-</div>
 
 <header class="top">
   <div class="wrap">
@@ -624,10 +612,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 <script>
 (function(){
-  // Подсказка про черновик
-  var draft=document.getElementById('draft');
-  document.getElementById('draft-close').addEventListener('click',function(){draft.hidden=true});
-
   // Слайдер «было / стало»
   var ba=document.getElementById('ba'), range=document.getElementById('ba-range');
   function setPos(v){ba.style.setProperty('--pos',v+'%')}
