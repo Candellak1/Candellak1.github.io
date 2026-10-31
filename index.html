@@ -217,6 +217,12 @@ section{padding-block:88px}
 .case dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;font-size:.95rem}
 .case dt{color:var(--muted)}
 .case dd{margin:0}
+.sites-head{display:flex;flex-direction:column;gap:8px;margin:56px 0 20px}
+.sites-head h3{font-family:var(--f-display);font-weight:800;font-size:clamp(1.25rem,2.4vw,1.6rem);letter-spacing:-.02em}
+.sites-head p{color:var(--muted)}
+.site-shot{position:relative;padding-bottom:28px}
+.site-shot img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+.site-shot .site-phone{position:absolute;right:14px;bottom:0;width:26%;border-radius:14px;border:3px solid var(--bg);box-shadow:0 14px 30px -10px rgba(0,0,0,.75)}
 .case-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px 32px;align-items:start}
 .case-wide .shot{grid-column:1;grid-row:1/span 3}
 .case-wide>:not(.shot){grid-column:2}
@@ -435,7 +441,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       <div class="sec-head reveal">
         <span class="eyebrow">Кейсы</span>
         <h2>Что было и что стало</h2>
-        <p>Новые версии реальных сайтов, которые я сделал по своей инициативе: что мешало клиентам и как это можно исправить.</p>
+        <p>Концепты, которые я сделал по своей инициативе: новые версии устаревших сайтов и сайты с нуля для бизнеса, у которого сайта не было.</p>
       </div>
       <div class="cases">
         <article class="case case-wide reveal">
@@ -487,6 +493,44 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
           </dl>
         </article>
       </div>
+      <div class="sites-head reveal">
+        <h3>Сайты с нуля</h3>
+        <p>Для салонов, у которых не было своего сайта, только карточка на Яндекс Картах.</p>
+      </div>
+      <div class="cases">
+        <article class="case reveal">
+          <div class="case-top"><h3>Nail York: сайт студии красоты</h3><span class="chip">Новый сайт</span></div>
+          <div class="site-shot">
+            <img src="img/sites/nailyork-desktop.webp" alt="Сайт студии красоты Nail York на компьютере" width="1280" height="800" loading="lazy">
+            <img class="site-phone" src="img/sites/nailyork-phone.webp" alt="Сайт студии красоты Nail York на телефоне" width="375" height="812" loading="lazy">
+          </div>
+          <div class="ba-mini">
+            <div><b>Было</b><span>Своего сайта не было: только карточка на Яндекс Картах со ссылками на онлайн-запись, мессенджеры и ВКонтакте.</span></div>
+            <div><b>Стало</b><span>Сайт-визитка в фирменных синем и белом цветах: услуги с ценами, рейтинг, адрес, часы работы, кнопки «Записаться онлайн» и «Позвонить».</span></div>
+          </div>
+          <dl>
+            <dt>Сфера</dt><dd>маникюр, педикюр, брови, Красноярск</dd>
+            <dt>Сделано</dt><dd>одностраничный сайт, версия для телефона, лёгкие анимации</dd>
+            <dt>Формат</dt><dd>концепт, сделан по своей инициативе</dd>
+          </dl>
+        </article>
+        <article class="case reveal">
+          <div class="case-top"><h3>Долгорукова: сайт салона красоты</h3><span class="chip">Новый сайт</span></div>
+          <div class="site-shot">
+            <img src="img/sites/dolgorukova-desktop.webp" alt="Сайт салона «Долгорукова» на компьютере" width="1280" height="800" loading="lazy">
+            <img class="site-phone" src="img/sites/dolgorukova-phone.webp" alt="Сайт салона «Долгорукова» на телефоне" width="375" height="812" loading="lazy">
+          </div>
+          <div class="ba-mini">
+            <div><b>Было</b><span>Своего сайта не было: только карточка на Яндекс Картах с онлайн-записью, WhatsApp, Telegram и ВКонтакте.</span></div>
+            <div><b>Стало</b><span>Сайт-визитка в чёрно-белом стиле, как у логотипа: акции первого визита, цены на ресницы и брови, рейтинг, контакты, кнопки «Записаться онлайн» и «Позвонить».</span></div>
+          </div>
+          <dl>
+            <dt>Сфера</dt><dd>салон красоты и ногтевая студия, Красноярск</dd>
+            <dt>Сделано</dt><dd>одностраничный сайт, версия для телефона, лёгкие анимации</dd>
+            <dt>Формат</dt><dd>концепт, сделан по своей инициативе</dd>
+          </dl>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -512,7 +556,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <span class="eyebrow">Обо мне</span>
         <h2>Меня зовут Сергей</h2>
         <p>Я занимаюсь разработкой в Санкт-Петербурге и помогаю малому и среднему бизнесу: дорабатываю и делаю сайты, создаю Telegram мини-приложения и ботов.</p>
-        <p>Сделал новые версии сайтов для ветеринарной клиники, шиномонтажа и мебельной мастерской — их можно посмотреть в кейсах. Работаю с сайтами на Tilda, WordPress и написанными вручную. Если ваш сайт сделан на чём-то другом — посмотрю и честно скажу, возьмусь ли.</p>
+        <p>Сделал новые версии сайтов для ветеринарной клиники, шиномонтажа и мебельной мастерской, а также два сайта с нуля для салонов красоты — их можно посмотреть в кейсах. Работаю с сайтами на Tilda, WordPress и написанными вручную. Если ваш сайт сделан на чём-то другом — посмотрю и честно скажу, возьмусь ли.</p>
         <p>В Telegram делаю ботов для приёма заявок и ответов на частые вопросы, а также мини-приложения для заказов и записи.</p>
         <p>Небольшие задачи — оплата после того, как вы посмотрите и примете результат. Для крупных заказов договариваемся о предоплате заранее.</p>
       </div>
